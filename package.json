@@ -8,7 +8,7 @@
     "dev": "nodemon --exec babel-node index.js",
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel -d ./build ./src -s",
-    "build": "npm run --prefix ../web prod-build && npm run clean && npm run build",
+    "build": "npm run clean && npm run build-babel",
     "start": "node ./build/index.js"
   },
   "keywords": [],
