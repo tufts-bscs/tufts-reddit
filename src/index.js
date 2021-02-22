@@ -10,16 +10,16 @@ dotenv.config();
 const startServer = async () => {
     const app = express();
 
-    if (fs.existsSync(path.join(__dirname + '/web-build'))) {
-        app.use(express.static(path.join(__dirname, '/web-build')));
+    if (fs.existsSync(path.join(__dirname + '/../web-build'))) {
+        app.use(express.static(path.join(__dirname, '/../web-build')));
     }
     app.use(helmet());
     app.use(cookieParser());
 
     // Checks if this is a production build
-    if (fs.existsSync(path.join(__dirname + '/web-build/index.html'))) {
+    if (fs.existsSync(path.join(__dirname + '/../web-build/index.html'))) {
         app.get('*', (req, res) => {
-            res.sendFile(path.join(__dirname + '/web-build/index.html'));
+            res.sendFile(path.join(__dirname + '/../web-build/index.html'));
         });
     } else {
         app.get('/', (req, res) => {
