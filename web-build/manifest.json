@@ -1,0 +1,9 @@
+{
+    "short_name": "Tufts Reddit",
+    "name": "Tufts Reddit | The Better Alternative to Facebook",
+    "icons": [],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+}
