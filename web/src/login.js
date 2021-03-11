@@ -1,5 +1,5 @@
 import React from 'react';
-import './register.css';
+import { Link } from 'react-router-dom';
 
 
 
@@ -24,7 +24,9 @@ function Login() {
                     </div>
 
                     <div class="field">
-                        <a href="#" onClick="Login()" class="trouble">Trouble signing in?</a>
+                        <Link to="/register" class="trouble">
+                            Trouble signing in?
+                        </Link>
                     </div>
 
                     <div class="field">
