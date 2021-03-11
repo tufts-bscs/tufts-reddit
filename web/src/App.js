@@ -1,10 +1,10 @@
 import React from 'react';
+import RegisterAndLogin from './register';
 
 function App() {
     return (
-        <>
-            <h1>Tuft Reddit</h1>
-        </>
+            <RegisterAndLogin />
+        
     );
 }
 
