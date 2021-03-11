@@ -1,5 +1,5 @@
-import React from 'react';
 import './register.css';
+import { Link } from 'react-router-dom';
 
 function Register() {
     return (
@@ -27,7 +27,9 @@ function Register() {
                    </div>
 
                    <div class="field">
-                       <a href="#" id="back" class="trouble">Back to Login Page</a>
+                        <Link to="/login" class="trouble">
+                            Back to Login Page
+                        </Link>
                    </div>
 
                    <div class="field">
