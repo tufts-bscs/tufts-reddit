@@ -20,5 +20,4 @@ node_modules/
 .DS_Store
 
 # production
-/build
-/web-build
+**/build

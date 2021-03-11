@@ -1,0 +1,20 @@
+{
+    "name": "tufts-reddit",
+    "version": "1.0.0",
+    "private": "true",
+    "description": "This project is an opportunity for the Tufts community to enhance their development skills on an open source project.",
+    "main": "index.js",
+    "scripts": {
+        "build:server": "npm --prefix ./server run build",
+        "build:web": "npm --prefix ./web run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dminor19/tufts-reddit.git"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/dminor19/tufts-reddit/issues"
+    },
+    "homepage": "https://github.com/dminor19/tufts-reddit#readme"
+}
