@@ -82,7 +82,7 @@ This is an example of how to list things you need to use the software and how to
 * From the web directory
   * To run the website locally
     ```sh
-    npm run dev
+    npm start
     ```
 
 <!-- CONTRIBUTING -->
