@@ -74,7 +74,6 @@ export const sendRegistationConfirmationEmail = async (
     if (process.env.NODE_ENV === 'production') {
         await sendEmail(email, subject, text, html);
     } else if (process.env.NODE_ENV === 'test') {
-        res.set('email-link', link);
     } else {
         console.log(link);
         await sendDummyEmail(email, subject, text, html);

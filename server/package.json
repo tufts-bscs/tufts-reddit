@@ -10,7 +10,7 @@
         "build-babel": "babel -d ./build ./src -s",
         "build": "npm run clean && npm run build-babel",
         "start": "NODE_ENV=production node ./build/index.js",
-        "test": "NODE_ENV=test jest --detectOpenHandles"
+        "test": "NODE_ENV=test jest"
     },
     "jest": {
         "testEnvironment": "node"

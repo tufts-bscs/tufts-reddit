@@ -1,60 +1,62 @@
 import supertest from 'supertest';
-import { startServer } from '../server';
 import mongoose from 'mongoose';
 
-var server;
+import { configureServer } from '../server';
+import { User } from '../models/User';
+import { Token } from '../models/Token';
 
-describe('Test User Auth', () => {
-    beforeAll(async () => {
-        // drop database
-        await mongoose.connect(
-            'mongodb://127.0.0.1/tufts-reddit',
-            {
-                useNewUrlParser: true,
-                useUnifiedTopology: true,
-                useCreateIndex: true,
-            },
-            () => {
-                mongoose.connection.db.dropDatabase();
-            }
-        );
+let server;
 
-        // start server
-        server = await startServer();
-    });
-
-    it('Try to Register', async () => {
-        const registrationData = {
-            email: 'jane.doe@tufts.edu',
-            password: '12345678',
-            name: 'Jane Doe',
-        };
-        const response = await supertest(server)
-            .post('/api/auth/register')
-            .send(registrationData);
-
-        // TODO: activate the account using this email link
-        const emailLink = response.headers['email-link'];
-
-        expect(response.status).toBe(200);
-    });
-
-    afterAll(async () => {
-        // drop database
-        await mongoose.connect(
-            'mongodb://127.0.0.1/tufts-reddit',
-            {
-                useNewUrlParser: true,
-                useUnifiedTopology: true,
-                useCreateIndex: true,
-            },
-            () => {
-                mongoose.connection.db.dropDatabase();
-            }
-        );
-
-        // close server and database
-        server.close();
-        mongoose.connection.close();
-    });
+beforeAll(async (done) => {
+    // start server
+    const { app } = await configureServer();
+    server = app.listen(5000);
+    done();
 });
+
+test('ATTEMPT TO REGISTER', async () => {
+    const registrationData = {
+        email: 'jane.doe@tufts.edu',
+        password: '12345678',
+    };
+
+    const response = await supertest(server)
+        .post('/api/auth/register')
+        .send(registrationData);
+
+    expect(response.status).toBe(200);
+    expect(response.text).toEqual('Successful registration');
+
+    const user = await User.updateOne(
+        { email: registrationData.email },
+        { isVerified: true }
+    );
+    await Token.deleteOne({ userId: user._id });
+});
+
+afterAll(async (done) => {
+    // close server and database
+    await server.close();
+    await dropAllCollections();
+    await mongoose.connection.close().then(() => done());
+});
+
+const dropAllCollections = async () => {
+    const collections = Object.keys(mongoose.connection.collections);
+    for (const collectionName of collections) {
+        const collection = mongoose.connection.collections[collectionName];
+        try {
+            await collection.drop();
+        } catch (error) {
+            if (error.message === 'ns not found') return;
+            if (
+                error.message.includes(
+                    'a background operation is currently running'
+                )
+            )
+                return;
+
+            console.log(error.message);
+        }
+    }
+};

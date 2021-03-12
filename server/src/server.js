@@ -16,7 +16,7 @@ export const configureServer = async () => {
         case 'production':
             dbName = process.env.DB_CONNECT;
             break;
-        case 'case':
+        case 'test':
             dbName = 'mongodb://127.0.0.1/tufts-reddit-test';
             break;
         default:

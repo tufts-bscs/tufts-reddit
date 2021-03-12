@@ -24,7 +24,6 @@ authRouter.post('/auth/register', async (req, res) => {
 
     // Create a new user
     const user = new User({
-        name: `${req.body.firstName} ${req.body.lastName}`,
         email: req.body.email,
         password: hashedPassword,
     });
