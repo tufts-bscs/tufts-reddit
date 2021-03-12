@@ -31,7 +31,7 @@ This project is an opportunity for the Tufts community to enhance their developm
 
 The main focus of this project is to teach the stack of tools/technoligies needed to become a fullstack web developer. This project in particular uses the MERN stack (MongoDB, ExpressJS, React and NodeJS).
 
-The purpose of the project is design a messaging board similar to one you may see on Reddit or StackOverflow or Piazza where students can post questions with a tag or set of tags, and anyone will be able to reply with comments.
+The goal of the project is design a messaging board similar to one you may see on Reddit or StackOverflow or Piazza where students can post questions with a tag or set of tags, and anyone will be able to reply with comments.
 
 The architecture of how this task can be accomplished is left completely up to the students. If you would like to requuest a new feature, please add to the ```issues``` board. Otherwise read the [Contributing](#contributing) section below.
 
