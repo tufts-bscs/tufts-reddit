@@ -9,7 +9,7 @@
 This project is an opportunity for the Tufts community to enhance their development skills on an open source project.
 
 <details open="open">
-  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <summary>Table of Contents</summary>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
