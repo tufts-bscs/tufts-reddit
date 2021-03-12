@@ -25,3 +25,5 @@ node_modules/
 # Workspace Files
 .vscode/
 .prettierignore
+# Local Netlify folder
+.netlify
