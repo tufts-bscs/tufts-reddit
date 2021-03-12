@@ -84,6 +84,15 @@ This is an example of how to list things you need to use the software and how to
     ```sh
     npm start
     ```
+    
+### Suggested Tools (if you want)
+* [Visual Studio Code][https://code.visualstudio.com/]
+  * [React Snippets][https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets]
+  * [Prettier][https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode]
+* [Postman][https://www.postman.com/]
+* [MongoDB Compass][https://www.mongodb.com/products/compass]
+* [GitHub Desktop][https://desktop.github.com/]
+* 
 
 <!-- CONTRIBUTING -->
 ## Contributing
