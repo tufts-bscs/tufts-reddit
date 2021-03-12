@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom';
 import './auth.scss';
 
 export const Login = () => {
+    const address = process.env.SERVER_URL || 'localhost:3000';
+    const formAction = `${address}/api/auth/login`;
     return (
         <div className="flexbox">
             <div className="content">
                 <div className="box">
-                    <form>
+                    <form method="POST" action={formAction}>
                         <legend className="sign-in">
                             Tufts Reddit Sign In
                         </legend>
