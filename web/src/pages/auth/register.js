@@ -2,6 +2,7 @@ import './auth.scss';
 import { Link } from 'react-router-dom';
 
 export const Register = () => {
+    console.log(process.env.SERVER_URL);
     const address = process.env.SERVER_URL || 'http://localhost:4000';
     const formAction = `${address}/api/auth/register`;
     return (
