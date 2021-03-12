@@ -33,7 +33,7 @@ The main focus of this project is to teach the stack of tools/technoligies neede
 
 The goal of the project is design a messaging board similar to one you may see on Reddit or StackOverflow or Piazza where students can post questions with a tag or set of tags, and anyone will be able to reply with comments.
 
-The architecture of how this task can be accomplished is left completely up to the students. If you would like to requuest a new feature, please add to the ```issues``` board. Otherwise read the [Contributing](#contributing) section below.
+The architecture of how this task can be accomplished is left completely up to the students. If you would like to requuest a new feature, please add to the [issues](issues-url) board. Otherwise read the [Contributing](#contributing) section below.
 
 Please feel free to contribute to any or all parts of the project, including testing, back-end and front-end development.
 
@@ -92,9 +92,10 @@ Contributions are what make the open source community such an amazing place to b
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/CoolFeature`)
-3. Commit your Changes (`git commit -m 'Added some cool feature'`)
-4. Push to the Branch (`git push origin feature/CoolFeature`)
-5. Open a Pull Request
+3. Open an issues on the [issues](issues-url) board and tell us what you're working on
+4. Commit your Changes (`git commit -m 'Added some cool feature'`)
+5. Push to the Branch (`git push origin feature/CoolFeature`)
+6. Open a Pull Request
 
 
 <!-- LICENSE -->
