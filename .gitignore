@@ -21,3 +21,7 @@ node_modules/
 
 # production
 **/build
+
+# Workspace Files
+.vscode/
+.prettierignore
