@@ -65,7 +65,7 @@ export const sendRegistationConfirmationEmail = async (
     email
 ) => {
     // Set up email with verification token
-    const link = `http://${req.headers.host}/api/auth/validateEmail/${token.token}`;
+    const link = `http://localhost:3000/user/confirm/${token.token}`;
     const subject = 'Welcome to Tufts Reddit!';
     const text = `Please click on the following link: ${link} to verify your account.`;
     const html = `<p>Hi there!<p><br><p>A new account has been created for you at http://${req.headers.host}. Please click on the following <a href="${link}">link</a> to verify your account and login.</p><br><p>If you did not request this, please ignore this email.</p>`;

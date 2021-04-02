@@ -1,8 +1,7 @@
 import Link from 'next/link';
 
 const Register = () => {
-    console.log(process.env.SERVER_URL);
-    const address = 'localhost:4000';
+    const address = 'http://localhost:4000';
     const formAction = `${address}/api/auth/register`;
     return (
         <div className="flexbox">
@@ -15,16 +14,20 @@ const Register = () => {
 
                         <label>Email</label>
                         <input
-                            type="text"
+                            name="email"
+                            type="email"
                             placeholder="email"
                             autoComplete="email"
+                            required
                         />
 
                         <label>Password</label>
                         <input
+                            name="password"
                             type="password"
                             placeholder="password"
                             autoComplete="new-password"
+                            required
                         />
 
                         <label>Confirm Password</label>
@@ -32,6 +35,7 @@ const Register = () => {
                             type="password"
                             placeholder="confirm password"
                             autoComplete="new-password"
+                            required
                         />
 
                         <input type="submit" value="Register" />

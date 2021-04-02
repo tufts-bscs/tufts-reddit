@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 
 const Login = () => {
-    const address = 'localhost:4000';
+    const address = 'http://localhost:4000';
     const formAction = `${address}/api/auth/login`;
     return (
         <div className="flexbox">
@@ -15,16 +15,20 @@ const Login = () => {
 
                         <label>Email</label>
                         <input
+                            name="email"
                             type="text"
                             placeholder="email"
                             autoComplete="email"
+                            required
                         />
 
                         <label>Password</label>
                         <input
+                            name="password"
                             type="password"
                             placeholder="password"
                             autoComplete="current-password"
+                            required
                         />
 
                         <input type="submit" value="Sign In" />

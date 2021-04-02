@@ -1,5 +1,5 @@
-import jwt from 'jsonwebtoken';
 import crypto from 'crypto';
+import jwt from 'jsonwebtoken';
 import { Token } from '../models/Token';
 
 export const createTokens = (user) => {
@@ -24,7 +24,7 @@ export const createTokens = (user) => {
 };
 
 export const generateVerificationToken = async (user, type) => {
-    const tokenString = crypto.randomBytes(64).toString('hex');
+    const tokenString = crypto.randomBytes(20).toString('hex');
     const token = new Token({
         userId: user._id,
         token: tokenString,
