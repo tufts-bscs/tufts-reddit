@@ -39,11 +39,14 @@ Please feel free to contribute to any or all parts of the project, including tes
 
 The production version of the project will be locked for security, but anyone is still welcome to contribute or just fork this repository.
 
+[WEEK ONE PRESENTATION](https://docs.google.com/presentation/d/1tHARaj7pK9JuyjTBO9AqY4Y1Hc3PoMsrkiYoKiu3E-E/edit?usp=sharing)
+
 ### Built With
 * [NodeJS](https://nodejs.dev/)
 * [MongoDB](https://www.mongodb.com/)
 * [ExpressJS](https://expressjs.com/)
 * [React](https://reactjs.org/)
+* [NextJS](https://nextjs.org/)
 
 
 <!-- GETTING STARTED -->
@@ -86,13 +89,12 @@ This is an example of how to list things you need to use the software and how to
     ```
     
 ### Suggested Tools (if you want)
-* [Visual Studio Code][https://code.visualstudio.com/]
-  * [React Snippets][https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets]
-  * [Prettier][https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode]
-* [Postman][https://www.postman.com/]
-* [MongoDB Compass][https://www.mongodb.com/products/compass]
-* [GitHub Desktop][https://desktop.github.com/]
-* 
+* [Visual Studio Code](https://code.visualstudio.com/)
+  * [React Snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+  * [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+* [Postman](https://www.postman.com/)
+* [MongoDB Compass](https://www.mongodb.com/products/compass)
+* [GitHub Desktop](https://desktop.github.com/)
 
 <!-- CONTRIBUTING -->
 ## Contributing
