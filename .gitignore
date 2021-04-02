@@ -2,23 +2,32 @@
 logs
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 # Dependency directories
 node_modules/
+**/.pnp
+.pnp.js
 
 # Optional npm cache directory
 .npm
 
+# testing
+**/coverage
+
 # dotenv environment variables file
 .env
-.env.test
+.env.test*
+.env.development*
 .env.production*
 
 # misc
 .DS_Store
+*.pem
 
 # production
 **/build
@@ -26,5 +35,13 @@ node_modules/
 # Workspace Files
 .vscode/
 .prettierignore
+
 # Local Netlify folder
 .netlify
+
+# next.js
+**/.next/
+**/out/
+
+# vercel
+.vercel

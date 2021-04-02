@@ -1,9 +1,8 @@
-import './auth.scss';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
-export const Register = () => {
+const Register = () => {
     console.log(process.env.SERVER_URL);
-    const address = process.env.SERVER_URL || 'http://localhost:4000';
+    const address = 'localhost:4000';
     const formAction = `${address}/api/auth/register`;
     return (
         <div className="flexbox">
@@ -37,7 +36,7 @@ export const Register = () => {
 
                         <input type="submit" value="Register" />
                     </form>
-                    <Link to="/login" className="trouble">
+                    <Link href="/login" className="trouble">
                         Back to Login
                     </Link>
                 </div>
@@ -45,3 +44,5 @@ export const Register = () => {
         </div>
     );
 };
+
+export default Register;

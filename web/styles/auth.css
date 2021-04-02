@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700');
 
-$background: linear-gradient(155deg, #f88e36, #b98a09, #ce6926);
-$white: white;
-$off-white: #e2e2e2;
-
 * {
-    font-family: Roboto, sans-serif;
+    font-family: roboto, sans-serif;
 }
 
 button::-moz-focus-inner {
@@ -20,7 +16,7 @@ body {
 }
 
 .flexbox {
-    background: $background;
+    background: linear-gradient(155deg, #f88e36, #b98a09, #ce6926);
     width: 100%;
     min-height: 100%;
     position: absolute;
@@ -46,7 +42,7 @@ body {
 
 .box {
     padding: 25px 25px;
-    background: $white;
+    background: white;
 }
 
 legend {
@@ -55,7 +51,7 @@ legend {
 
 input {
     font-size: 16px;
-    background: $off-white;
+    background: #e2e2e2;
     width: 100%;
     height: 35px;
     padding: 0 10px;
